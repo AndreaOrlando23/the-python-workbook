@@ -18,7 +18,7 @@ for position, word in enumerate(inf):
     print(position + 1, line)
     index += 1
     if index >= 10:
-        break
+        quit()
 
 inf.close()
 
