@@ -1,3 +1,4 @@
+"""
 vowels = ['a', 'e', 'i', 'o', 'u', 'y']
 
 word = input("Enter a word: ")
@@ -9,5 +10,4 @@ for letter in word:
         print(letter)
 if not found:
     print(f"There is no vowels in {word}")
-
-
+"""
