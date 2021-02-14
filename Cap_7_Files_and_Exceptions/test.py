@@ -11,3 +11,9 @@ for letter in word:
 if not found:
     print(f"There is no vowels in {word}")
 """
+
+test = ['e', 'i', 'o', 'u', 'a', 'y']
+test2 = ['a', 'e', 'i', 'o', 'u', 'y']
+
+
+print(sorted(test) == test2)
