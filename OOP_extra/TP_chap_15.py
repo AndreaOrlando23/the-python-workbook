@@ -1,4 +1,5 @@
 from math import sqrt
+import copy
 
 
 class Point:
@@ -15,9 +16,18 @@ def print_point(p):
     print('{}, {}'.format(p.x, p.y))
 
 
-def distance_between(p):
-    distance = sqrt(p.x ** 2 + p.y ** 2)
-    print(distance)
+def distance_between(p1, p2):
+    """Computes the distance between two Point objects.
+
+    p1: Point
+    p2: Point
+
+    returns: float
+    """
+    dx = p1.x - p2.x
+    dy = p1.y - p2.y
+    distance = sqrt(dx ** 2 + dy ** 2)
+    return distance
 
 
 class Rectangle:
@@ -69,3 +79,11 @@ print(box.corner.x, box.corner.y)
 
 center = find_center(box)
 print_point(center)
+
+
+def copy_rectangle(rect1):
+    rect2 = copy.deepcopy(rect1)
+    return rect2 is rect1
+
+
+print(copy_rectangle(box))
