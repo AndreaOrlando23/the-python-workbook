@@ -9,7 +9,7 @@ start.second = 0
 
 def main():
     Time.print_time(start)
-    # method syntax - call print_time in a more concise version
+    # method syntax - call print_time in a more concisely version
     start.print_time()
 
     end = start.increment(1337)

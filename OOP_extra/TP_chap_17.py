@@ -1,6 +1,7 @@
 # from TP_chap_16 import int_to_time
 from time import Time
 
+
 class Time:
 
     def __init__(self, hour=0, minute=0, second=0):
@@ -21,6 +22,10 @@ class Time:
         return int_to_time(seconds)
 
     def is_after(self, other):
+        return self.time_to_int() > other.time_to_int()
+
+    # another way to compare Time
+    def __lt__(self, other):
         return self.time_to_int() > other.time_to_int()
 
 
