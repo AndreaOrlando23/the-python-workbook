@@ -1,5 +1,6 @@
 from random import random, shuffle
 
+
 """
 Suits:
 Spades --> 3
