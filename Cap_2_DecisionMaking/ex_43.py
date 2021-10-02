@@ -1,5 +1,4 @@
 # EXERCISE 43 : Frequency to note - saw the solution
-# TODO
 
 C4_FREQ = 261.63
 D4_FREQ = 293.66
@@ -33,6 +32,6 @@ else:
 
 # Display the result or an appropriate error message
 if note == "":
-    print("There is no note that corresponds to that frequency")
+    print("ERROR: The frequency is not in the fourth octave notes.")
 else:
     print("The frequency is", note)

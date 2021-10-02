@@ -1,11 +1,11 @@
 # EXERCISE 46 : What color is that square (chess)
 
-position = input("Enter a chess board position: ")
+position = input("Enter a chess board position (e.g A1): ")
 
-col = position[0].lower()
+col = position[0].upper()
 row = int(position[1])
 
-if col in "aceg":
+if col in "ACEG":
     starts_with_black = True
 else:
     starts_with_black = False
@@ -23,6 +23,6 @@ else:
         white = True
 
 if white:
-    print(f"The position {position} is colored white")
+    print(f"The square position {position} is white")
 else:
-    print(f"The position {position} is colored black")
+    print(f"The square position {position} is black")
