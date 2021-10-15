@@ -1,7 +1,5 @@
 # EXERCISE 78 : The Collatz Conjecture
 
-# TODO
-
 NEW_BASE = 2
 
 num = int(input('Enter a non-negative integer: '))
@@ -18,5 +16,3 @@ while q > 0:
     q = q // NEW_BASE
 
 print(f"{num} in decimal is {result} in binary")
-
-# immettendo come input 18 ottengo 01001
