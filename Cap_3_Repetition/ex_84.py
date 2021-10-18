@@ -3,7 +3,7 @@
 from random import randint
 
 
-def sequence():
+def coin_flip_simulation():
     result = ""
     count = 0
     while True:
@@ -21,11 +21,12 @@ def sequence():
                 return[result, count]
                 quit()
 
-def ten_sequence():
+
+def ten_flips():
     count = 0
     for i in range(10):
-        print(f"{sequence()[0]} ({sequence()[1]} flips)")
-        count += sequence()[1]
+        print(f"{coin_flip_simulation()[0]} ({coin_flip_simulation()[1]} flips)")
+        count += coin_flip_simulation()[1]
     return f"On average, {count / 10} flips were needed"
 
-print(ten_sequence())
+print(ten_flips())
