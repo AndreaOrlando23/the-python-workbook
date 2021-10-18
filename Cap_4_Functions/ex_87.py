@@ -1,17 +1,11 @@
 # EXERCISE 87 : Shipping calculator
 
-"""
-Il programma sembra funzionare correttamente con tutti i valori passati tranne che per il 2
-in quel caso l'output è 13.899999999...
---------chiedere su slack-----------------
-"""
-
 STANDARD_RATE = 10.95
 PLUS_RATE = 2.95
 
 
 def shipping(items):
-    total_rate = (items - 1) * PLUS_RATE + STANDARD_RATE
+    total_rate = (items -1) * PLUS_RATE + STANDARD_RATE
     return total_rate
 
 
@@ -22,7 +16,10 @@ def main():
         print(f"The shipping rate is: {STANDARD_RATE}")
 
     else:
-        total_shipping = shipping(order_items)
+        # round() is a workaround in case the order_items == 2
+        # couse of the output of 2.95 + 10.95 generate the result of 13.899999999999999 instead of 13.9
+        # all the others cases works fine
+        total_shipping = round(shipping(order_items), 2)
         print(f"The shipping rate is: {total_shipping}")
 
 
