@@ -1,6 +1,6 @@
 # EXERCISE 70 : Parity Bits
 
-line = input("Enter 8 bits: ")
+line = input("Enter 8 bits (blank to exit): ")
 
 while line != "":
     # Ensure that the line has a total of 8 zeros and ones and exactly 8 characters
