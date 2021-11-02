@@ -1,9 +1,12 @@
 # EXERCISE 60 : What day of the week is january 1
 
 year = int(input("Enter the year: "))
-day = ""
+day_names = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
 day_of_the_week = (year + (year-1)//4 - (year-1)//100 + (year-1)//400) % 7
+
+"""
+day = ""
 
 if day_of_the_week == 0:
     day = "Sunday"
@@ -19,5 +22,6 @@ elif day_of_the_week == 5:
     day = "Friday"
 elif day_of_the_week == 6:
     day = "Saturday"
+"""
 
-print(f"The new year's day in {year} is {day}")
+print(f"The new year's day in {year} is {day_names[day_of_the_week]}")
