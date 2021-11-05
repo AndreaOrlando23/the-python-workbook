@@ -1,5 +1,5 @@
 # EXERCISE 95 : Capitalize it
-# Da verificare la soluzione del libro perchè credo ci sia un bug
+# not best solution - see ex_95_BIS
 
 
 def capitalize(s):
@@ -8,7 +8,7 @@ def capitalize(s):
 
     # Capitalize the first non-space character in the string
     pos = 0
-    while pos < len(s) and result[pos] == " ":
+    while pos < len(s) and result[pos] == ' ':
         pos += 1
 
     if pos < len(s):
@@ -43,7 +43,7 @@ def capitalize(s):
                      result[pos + 1] == "!" or result[pos + 1] == "?" or
                      result[pos + 1] == "'"):
                 # Replace the "i" with an "I" without changing any other characters
-                result = result[0:pos] + "I" + result[pos + 1:len(s)]
+                result = result[0:pos] + "I" + result[pos + 1:len(result)]
 
             pos += 1
 
