@@ -33,7 +33,7 @@ def display_card(card):
 
     for i in range(5):
         for letter in ["B", "I", "N", "G", "O"]:
-            print("%2d" % card[letter][i], end=" ")
+            print("%02d" % card[letter][i], end=" ")
         print()
 
 
