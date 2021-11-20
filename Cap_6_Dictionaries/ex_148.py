@@ -29,16 +29,6 @@ def bingo(card):
             return call
 
 
-
-card1 = {'B': [2, 14, 6, 7, 15], 
-         'I': [16, 17, 18, 19, 20], 
-         'N': [43, 44, 41, 33, 45], 
-         'G': [48, 60, 53, 49, 57], 
-         'O': [72, 65, 61, 67, 71]}
-
-
-print(bingo(card1))
-
 def play_1000_times(card):
     games = []
     card = create_card()
