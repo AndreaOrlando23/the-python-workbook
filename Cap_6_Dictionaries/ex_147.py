@@ -1,3 +1,4 @@
+# Checking for a winning card (Bingo)
 from ex_146 import display_card
 
 
