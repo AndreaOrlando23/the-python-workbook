@@ -10,39 +10,44 @@ def bingo(card):
     valid_calls = [i for i in range(1, 76)]
     shuffle(valid_calls)
 
-    call = 0
-    daubered_card = copy.deepcopy(card)  # we use this card like when tou use the douber on real Bingo game
+    calls = 0
+    '''
+    We'll use daubered_card to replace nums extracted with value 0 
+    It will helpfull for the logic of winning_card() function
+    The name daubered is ispired by the dauber use in Bingo game
+    '''
+    daubered_card = copy.deepcopy(card)
 
     while valid_calls != []:
         number = valid_calls.pop()
-        call += 1
+        calls += 1
         
         for letter, values in daubered_card.items():
             if number in values:
                 index = values.index(number)
-                values[index] = 0  # replace the number at the given index
+                values[index] = 0  # replace the number with 0 at the given index
 
         
         if winning_card(daubered_card):
             display_card(daubered_card)
-            print(f"You Won!! {call} calls needed. Last number called is: {number}\n")
-            return call
+            print(f"You Won!! {calls} calls needed. Last number called is: {number}\n")
+            return calls
 
 
 def play_1000_times(card):
     games = []
     card = create_card()
     for i in range(1000):
-        call = bingo(card)
-        games.append(call)
+        calls = bingo(card)
+        games.append(calls)
     
-    highest_call = max(games)
-    lowest_call = min(games)
-    avg_call = sum(games) / 1000
+    highest_calls = max(games)
+    lowest_calls = min(games)
+    avg_calls = sum(games) / len(games)  # -> 1000
 
-    print('highest call: %d' % highest_call)
-    print('lowest call: %d' % lowest_call)
-    print('average call: %.1f' % avg_call)
+    print('Highest calls: %d' % highest_calls)
+    print('Lowest calls: %d' % lowest_calls)
+    print('Average calls: %.1f' % avg_calls)
 
 
 def main():

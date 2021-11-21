@@ -1,5 +1,4 @@
 # EXERCISE 146 : Create a Bingo Card
-
 from random import randrange
 
 
